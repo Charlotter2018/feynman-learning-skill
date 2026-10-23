@@ -36,6 +36,13 @@ Copy-Item -Recurse "$env:TEMP\feynman-learning-skill\feynman-learning" "$HOME\.c
 
 其他 Agent 工具：把 `feynman-learning/` 文件夹放进对应的 skills 目录即可。
 
+**没有 git？** 两种办法任选：
+
+- 先自行安装 git：macOS 运行 `xcode-select --install`（或 `brew install git`）；Windows 从 https://git-scm.com/download/win 下载；Linux 用包管理器，如 `sudo apt install git`
+- 不用 git：下载 [ZIP 包](https://github.com/Charlotter2018/feynman-learning-skill/archive/refs/heads/main.zip)，解压后把里面的 `feynman-learning/` 文件夹复制到 `~/.claude/skills/`
+
+可选的可视化 Skill 安装也依赖 git；没有 git 时，Skill 会提示你自行安装，或改用 ZIP 手动安装。
+
 ## 第一次使用
 
 在你想存放学习笔记的文件夹（比如 Obsidian 仓库）里打开 Claude Code，说「学习 <文章链接或文件>」。第一次会先做初始化，**每一步都会先问你**：

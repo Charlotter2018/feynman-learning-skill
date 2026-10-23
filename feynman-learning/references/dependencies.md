@@ -10,6 +10,19 @@ All three are optional. They only matter if the user reads their notes in Obsidi
 
 ## Install
 
+First check `git --version`.
+
+- **git available** → use the commands below.
+- **git missing** → do not try to install git yourself. Tell the user git is needed for the one-command install and recommend they set it up themselves:
+  - macOS: run `xcode-select --install`, or `brew install git`
+  - Windows: download from https://git-scm.com/download/win (or `winget install --id Git.Git -e`)
+  - Linux: the distro package manager, e.g. `sudo apt install git`
+  Then offer the no-git alternative: download the ZIPs, unzip, and copy the skill folders into the skills folder:
+  - https://github.com/axtonliu/axton-obsidian-visual-skills/archive/refs/heads/main.zip → `mermaid-visualizer/`, `excalidraw-diagram/`
+  - https://github.com/kepano/obsidian-skills/archive/refs/heads/main.zip → `skills/json-canvas/`
+  If the user prefers to do it later, set `"visual_skills": "declined"` and continue; they can say "安装可视化 skill" any time.
+
+
 Use the skills folder of the agent the user is running. Claude Code: `~/.claude/skills`. Other agents: use their documented skills folder and replace `SKILLS_DIR` below.
 
 macOS / Linux:
